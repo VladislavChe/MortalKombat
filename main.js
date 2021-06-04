@@ -1,4 +1,6 @@
 // Task #0
+const $arena1 = document.querySelector('.arena1');
+
 const player1 = {
   name: 'Subzero',
   hp: 80,
@@ -22,12 +24,12 @@ const player2 = {
 // Task #1
 function createPlayer(classname, obj) {
   // Create elements
-  const $player = document.createElement('div'),
-    $progressbar = document.createElement('div'),
-    $character = document.createElement('div'),
-    $life = document.createElement('div'),
-    $name = document.createElement('div'),
-    $img = document.createElement('img');
+  const $player = document.createElement('div');
+  const $progressbar = document.createElement('div');
+  const $character = document.createElement('div');
+  const $life = document.createElement('div');
+  const $name = document.createElement('div');
+  const $img = document.createElement('img');
 
   // add attributes
   $player.classList.add(classname);
@@ -50,7 +52,6 @@ function createPlayer(classname, obj) {
   $player.appendChild($character);
   $character.appendChild($img);
 
-  const $arena1 = document.querySelector('.arena1');
   $arena1.appendChild($player);
 }
 
